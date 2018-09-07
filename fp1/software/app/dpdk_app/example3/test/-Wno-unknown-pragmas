@@ -1,0 +1,4 @@
+/home/hust/poc-fpga/fp1/software/app/dpdk_app/example3/test/fpga_ddr_rw.o: \
+ fpga_ddr_rw.c ringbuffer.h queue_ctrl.h \
+ /home/hust/poc-fpga/fp1/software/app/dpdk_app/include/regs_infos.h \
+ /home/hust/poc-fpga/fp1/software/app/dpdk_app/include/fpga_ddr_rw_interface.h

@@ -1,0 +1,1 @@
+GROUP ( librte_mbuf.so librte_eal.so libethdev.so librte_mempool.so librte_ring.so librte_kvargs.so librte_pmd_acc.so )
