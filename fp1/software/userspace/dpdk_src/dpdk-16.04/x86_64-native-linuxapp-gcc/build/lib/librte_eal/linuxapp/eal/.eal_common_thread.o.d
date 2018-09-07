@@ -32,7 +32,7 @@ dep_eal_common_thread.o = \
  /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/x86_64-native-linuxapp-gcc/include/rte_eal.h \
  /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/x86_64-native-linuxapp-gcc/include/rte_launch.h \
  /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/x86_64-native-linuxapp-gcc/include/rte_memory.h \
- /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/x86_64-native-linuxapp-gcc/include/exec-env/rte_dom0_common.h \
+ /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/lib/librte_eal/linuxapp/eal/include/exec-env/rte_dom0_common.h \
  /home/hust/zzt/poc-fpga/fp1/software/userspace/dpdk_src/dpdk-16.04/x86_64-native-linuxapp-gcc/include/rte_common.h \
  /usr/include/ctype.h /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \

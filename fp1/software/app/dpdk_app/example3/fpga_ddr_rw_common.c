@@ -117,6 +117,7 @@ int memory_manager_global_init(void) {
     //mem_pool_stru.buf_num = 5000;
     mem_pool_stru.buf_type = MBUF_512K;
     mem_pool_stru.buf_num = 6000;
+    //mem_pool_stru.buf_num = 10000;
     ret = memory_manager_init(&mem_pool_stru);
     if(ret)
     {
@@ -237,7 +238,8 @@ int alloc_thread_id_resource(unsigned int *thread_id) {
 int free_thread_id_rersource(unsigned int thread_id) {
 
     (void)pthread_mutex_lock(&g_thread_mutex);
-    if(g_thread_info[thread_id].used_flag == 0) {
+    if(g_thread_info[thread_id].used_flag == 0) {
+
         (void)pthread_mutex_unlock(&g_thread_mutex);
         printf("thread id not been used, can't free, thread id %d.\n", thread_id);
         return -1;
@@ -549,7 +551,8 @@ void *fpga_ddr_rw_rx_process_thread(void *arg) {
             else if(hard_acc_dst->opcode == WRITE_MODE) {
                 rw_data.cpu_vir_dst_addr = 0x0;
                 rw_data.cpu_vir_src_addr = (unsigned long long)((char*)hard_acc_src + sizeof(HARDACC_STRU));
-                rw_data.fpga_ddr_wr_addr = hard_acc_dst->src_fpga_phy_addr;
+                rw_data.fpga_ddr_wr_addr = hard_acc_dst->src_fpga_phy_addr;
+
                 rw_data.length = hard_acc_dst->length - sizeof(HARDACC_STRU);
                 (void)memory_manager_free_bulk((void*)vir_addr);
                 g_resultcallback(hard_acc_dst->thread_id, slot_id[idx], rw_data, WRITE_MODE);
