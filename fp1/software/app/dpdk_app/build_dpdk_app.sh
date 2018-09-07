@@ -23,14 +23,16 @@ CUR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CUR_PATH_BUILD=${script%/*}
 DPDK_DIR=${CUR_PATH}/../../userspace/dpdk_src
 
+
 # 1. build dpdk-16.04 and securec
-cd ${DPDK_DIR}/
-chmod +x build_dpdk.sh
-./build_dpdk.sh
-if [ $? -ne 0 ]; then
-        echo "build dpdk failed!"
+#cd ${DPDK_DIR}/
+#chmod +x build_dpdk.sh
+#./build_dpdk.sh
+#if [ $? -ne 0 ]; then
+#        echo "build dpdk failed!"
 #        exit 1
-fi
+#fi
+
 # 2.  set build env path
 export DPDK_INCLUDE_HOME=${DPDK_DIR}/dpdk-16.04/x86_64-native-linuxapp-gcc/include
 export DPDK_LIB_HOME=${DPDK_DIR}/dpdk-16.04/x86_64-native-linuxapp-gcc/lib
